@@ -1,0 +1,51 @@
+.card{
+    background-color: #232323;
+    width: 410px;
+    height: 664px;
+    margin: auto auto;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}
+
+.content{
+    margin-top: 24px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.content h1{
+    line-height: 36px;
+    margin-right: 73px !important;
+}
+.content p{
+    font-size: 20px;
+    font-weight: 400;
+}
+.content button{
+    background-color: #FFE81F;
+    color: #20182B;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.377);
+    border-radius: 8px;
+    width: 362px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #FFE81F;
+    cursor: pointer;
+}
+
+.filmes{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+.filme{
+    padding: 8px 4px;
+    margin: 5px 0;
+    background-color: #353535;
+    border-radius: 4px;
+    text-align: center;
+    margin: 2px 5px;
+}

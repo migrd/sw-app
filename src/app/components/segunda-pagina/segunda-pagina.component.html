@@ -1,0 +1,15 @@
+<div class="bg">
+    <div class="email-card" [hidden]="this.load().loading">
+      <div class="content">
+        <p>Agora, digite seu personagem favorito de Star Wars</p>
+  
+        <input id="input-email" type="text" placeholder="ex: Darth Vader" [formControl]="nome" [class.input-nome-sucesso]="!nome.errors" required>
+        <p *ngIf="!swApi().personagemData" class="text-error">
+          personagem inválido
+        </p>
+        <button [disabled]="nome.errors" (click)="searchPersonagem(nome.value)">Próximo</button>
+  
+      </div>
+    </div>
+  
+  </div>

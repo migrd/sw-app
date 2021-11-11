@@ -1,0 +1,17 @@
+<div class="bg">
+  <img class="logo" src="../assets/imgs/logo-sw.png">
+  <div class="email-card">
+    <div class="content">
+      <h1>Olá!</h1>
+      <p>Para começar seu teste, digite um e-mail:</p>
+
+      <input id="input-email" type="email" placeholder="exemplo@email.com" [formControl]="email" [class.input-email-sucesso]="!email.errors" required>
+      <p *ngIf="email.errors &&(email.touched || email.dirty)" class="text-error">
+        E-mail inválido
+      </p>
+      <button [disabled]="email.errors" (click)="proximaPagina()">Próximo</button>
+
+    </div>
+  </div>
+
+</div>

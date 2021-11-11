@@ -1,0 +1,59 @@
+<div class="bg">
+    <div *ngFor="let display of display()" class="card">
+
+        <div class="content">
+            <h1>Informações sobre {{ display.nome }}:</h1>
+            
+            <p>Filmes:</p>
+            <div class="filmes">
+                <div class="filme">
+                    {{ display.filmes[0] }}
+                </div>
+                <div class="filme">
+                    {{ display.filmes[1] }}
+                </div>
+                <div class="filme">
+                    {{ display.filmes[2] }}
+                </div>
+                <div class="filme">
+                    {{ display.filmes[3] }}
+                </div>
+            </div>
+
+            <p>Naves:</p>
+            <div class="filmes">
+                <div class="filme">
+                    {{ display.naves[0] }}
+                </div>
+            </div>
+
+            <p>Veículos:</p>
+            <div class="filmes">
+                <div class="filme">
+                    {{ display.veiculos }}
+                </div>
+            </div>
+
+            <p>Especíe:</p>
+            <div class="filmes">
+                <div class="filme">
+                    {{ display.especie }}
+                </div>
+            </div>
+
+            <p>Planeta:</p>
+            <div class="filmes">
+                <div class="filme">
+                    {{ display.planeta }}
+                </div>
+            </div>
+
+            <button (click)="pesquisarNovamente()">Pesquisar Novamente</button>
+
+
+
+            <p></p>
+        </div>
+
+    </div>
+</div>
