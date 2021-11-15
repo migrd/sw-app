@@ -17,7 +17,9 @@ export class SegundaPaginaComponent implements OnInit {
     Validators.required,
   ]));
 
-  constructor(private _swApi: SwApiService, private router: Router, private _loadService: LoadScreenService) { }
+  constructor(private _swApi: SwApiService, private router: Router, private _loadService: LoadScreenService) {
+    this._swApi = _swApi
+  }
 
   private temp: any = [];
 
@@ -27,13 +29,12 @@ export class SegundaPaginaComponent implements OnInit {
   
   saveData(){
     this.swApi().setData('data', this.swApi().personagemData);
-    //console.log("1", this.swApi().personagemDisplay[0])
+    console.log("1", this.swApi().personagemDisplay[0])
     //this.swApi().setData('data', this.swApi().personagemDisplay);
     
     //console.warn("personagemDisplay",this.swApi().personagemDisplay)
     //console.log("getData",this.swApi().getData('data'))
   }
-
 
 
   load(){
@@ -73,6 +74,7 @@ export class SegundaPaginaComponent implements OnInit {
 
   ngOnInit(): void {
     //console.warn(this.swApi().personagemData)
+    //console.warn(this.swApi().personagemDisplay[0]);
   }
 
 }
