@@ -10,7 +10,9 @@ import { SwApiService } from './../../services/sw-api.service';
 })
 export class TerceiraPaginaComponent implements OnInit {
 
-  constructor(private _swApi: SwApiService, private router: Router) { }
+  constructor(private _swApi: SwApiService, private router: Router) {
+    this._swApi = _swApi;
+  }
 
   swApi(){
     return this._swApi;
@@ -73,7 +75,7 @@ export class TerceiraPaginaComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log("3 getData",this.getData());
+    //console.log("3 getData",this.getData());
     //console.warn(this.swApi().personagemDisplay[0]);
 
     this.swApi().personagemDisplay[0].nome = this.swApi().personagemData[0].name;
@@ -98,7 +100,7 @@ export class TerceiraPaginaComponent implements OnInit {
 
     this.getPlaneta(this.swApi().personagemData[0].homeworld);
 
-    console.log("certo",this.swApi().personagemDisplay[0])
+    //console.log("certo",this.swApi().personagemDisplay[0])
 
 
 
